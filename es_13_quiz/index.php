@@ -5,17 +5,22 @@
 
 
     if(!isset($_SESSION["current_question"])){
-    //riazzera il valore della question
-    $_SESSION["current_question"] = 0;
-    //inizializza il vettore answers svuotandolo
-    $_SESSION["answers"] = [];
+        //riazzera il valore della question
+        $_SESSION["current_question"] = 0;
+        //inizializza il vettore answers svuotandolo
+        $_SESSION["answers"] = [];
     }
 
+    // if ($question_num >= $tot) {
+    // header("Location: results.php");
+    // exit;
+    // }
     $question_num=$_SESSION["current_question"];
     $tot = count($quiz); //conta gli elementi del quiz
     
     $question = $quiz[$question_num]["question"];
     $options = $quiz[$question_num]["options"];
+
 ?>
 
 <!DOCTYPE html>
@@ -40,7 +45,7 @@
 
     <div class="card p-4">
         <h4 class="mb-4">
-            Domanda <?= $question_num + 1 ?> di <?= $tot ?>
+            Domanda <?= $question_num + 1 ?> di <?= $tot ?> <?= $_SESSION["current_question"];?>
         </h4>
 
         <h5 class="mb-3"><?= $question ?></h5>
@@ -55,7 +60,7 @@
                 </div>
             <?php endforeach; ?>
 
-            <button type="submit" class="btn btn-primary mt-3">Invia risposta</button>
+            <button type="submit" name="action" class="btn btn-primary mt-3">Invia risposta</button>
         </form>
 
     </div>

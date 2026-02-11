@@ -32,7 +32,7 @@ include("./connection.php");
                 <tbody>';
         while ($row = $result->fetch_assoc()) {
             // Nome del cliente che riporta alla pagina con ordini
-            echo "<tr><td><a href='customerOrders.php?customerNumber={$row["customerNumber"]}' class='fw-semibold link-body-emphasis link-offset-2 link-underline-opacity-0'>{$row["name"]}</a></td>";
+            echo "<tr><td><a href='customerOrder.php?customerNumber={$row["customerNumber"]}' class='fw-semibold link-body-emphasis link-offset-2 link-underline-opacity-0'>{$row["name"]}</a></td>";
             // Informazioni sul cliente
             echo "<td>" . $row["contact"] . "</td><td>" . $row["phone"] . "</td><td>" . $row["address"] . "</td><td>" . $row["city"] . "</td><td>" . $row["creditLimit"] . "</td></tr>";
         }

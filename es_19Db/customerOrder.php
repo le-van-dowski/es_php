@@ -45,7 +45,8 @@
     ?>
     
      <div class="text-center my-3">
-        <a href="./addOrder.php" class="link-dark link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover">Add Order</a>
+    <a href="./addOrder.php" class="btn btn-primary me-2">Add Order</a>
+    <a href="./index.php" class="btn btn-secondary">Back to Customer List</a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
